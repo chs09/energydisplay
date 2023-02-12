@@ -12,3 +12,33 @@ The used pins are 4, 15, 16 and 17 as per the sourcecode, but this can be change
 
 A color LCD version with animations for use with the M5Stack line of modules can be found on my github as well.
 
+install Display Driver GxEPD
+https://github.com/ZinggJM/GxEPD/releases/
+
+install Adafruit GFX Library
+https://github.com/adafruit/Adafruit-GFX-Library
+
+`/energydisplay/state`
+|line|name   |value        |unit|description                          |
+|----|-------|-------------|----|-------------------------------------|
+|1   |battery|0-100        | %  |battery state in percent             |
+|2   |pv     |0.0-99.9     | kW |current PV power                     |
+|3   |use    |0.0-99.9     | kW |current usage                        |
+|4   |grid   |-99.9-99.9   | kW |current power from or to grid        |
+|5   |battuse|-99.9-99.9   | kW |current power from or to the battery |
+|6   |curtime|00:00-23:59  |    |current time (formatted)             | 
+|7   |curdate|02.11.2023   |    |current date (formatted)             |
+
+`/energydisplay/lastpv`
+|line|name   |value        |unit|description                          |
+|----|-------|-------------|----|-------------------------------------|
+|1   |current|0-65535      | W  |pv power output                      |
+|... |       |             |    |                                     |
+|130 |latest |0-65535      | W  |pv power output                      |
+
+`/energydisplay/lastuse`
+|line|name   |value        |unit|description                          |
+|----|-------|-------------|----|-------------------------------------|
+|1   |current|0-65535      | W  |power usage                          |
+|... |       |             |    |                                     |
+|130 |latest |0-65535      | W  |power usage                          |
