@@ -7,16 +7,13 @@ The data is fetched from a Raspberry Pi or Beaglebone or any http web server for
 
 To extend the lifetime of the e-ink display, the image is refreshed only once every 5 minutes. Your SSID, wifi password and URL to fetch the files has to be filled into the relevant variables in the source.
 
-The GxEPD library is needed to compile. It can be found at https://github.com/ZinggJM/GxEPD, make sure you use v2.x and not v3.x
-The used pins are 4, 15, 16 and 17 as per the sourcecode, but this can be changed as needed. Wiring is up to personal preference. 
+The following libraries are needed to compile:
+- The Display Library GxEPD. It can be found at https://github.com/ZinggJM/GxEPD. This implementation uses V3.1.
+- As an dependcy the Adafruit GFX Library must also be installed. It can be found at https://github.com/adafruit/Adafruit-GFX-Library.
 
-A color LCD version with animations for use with the M5Stack line of modules can be found on my github as well.
+The used pins are 3, 5, 16, 17, 18, 19 and 23 as per the sourcecode, but this can be changed as needed. Wiring is up to personal preference. 
 
-install Display Driver GxEPD
-https://github.com/ZinggJM/GxEPD/releases/
-
-install Adafruit GFX Library
-https://github.com/adafruit/Adafruit-GFX-Library
+A color LCD version with animations for use with the M5Stack line of modules can be found on https://github.com/dividebysandwich/energydisplay-m5 as well.
 
 `/energydisplay/state`
 |line|name   |value        |unit|description                          |
